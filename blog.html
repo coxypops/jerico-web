@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Jerico</title>
+<meta name="description" content="Tips on bills, energy, groceries, and home services. Save more every month with Jerico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="data:image/png;base64,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" class="brand-icon" alt="Jerico">
+      <span class="brand-name">Jerico</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="../jerico-prototype.html" class="btn btn-outline">Sign in</a>
+      <a href="index.html#cta" class="btn btn-teal">Get early access</a>
+    </div>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="wrap">
+    <h1>Tips for a smarter home</h1>
+    <p>Cut bills, reduce waste, and stay on top of every dollar — practical guides from the Jerico team.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="filter-bar" id="filterBar">
+    <button class="pill active" onclick="filterCat('all',this)">All posts</button>
+    <button class="pill" onclick="filterCat('bills',this)">Bills &amp; Energy</button>
+    <button class="pill" onclick="filterCat('groceries',this)">Groceries</button>
+    <button class="pill" onclick="filterCat('home',this)">Home Services</button>
+    <button class="pill" onclick="filterCat('news',this)">News</button>
+  </div>
+
+  <div class="article-grid" id="grid">
+
+    <!-- Featured -->
+    <article class="art-card featured" data-cat="bills">
+      <div class="art-visual">
+        <svg viewBox="0 0 680 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="680" height="220" fill="#E6F5F3"/>
+          <text x="40" y="175" font-family="Inter,sans-serif" font-weight="800" font-size="160" fill="#0D9E8C" opacity=".07">$</text>
+          <polyline points="0,160 100,130 220,145 360,90 480,108 620,60 680,72" fill="none" stroke="#0D9E8C" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+          <circle cx="360" cy="90" r="7" fill="#0D9E8C" opacity=".7"/>
+          <circle cx="360" cy="90" r="16" fill="#0D9E8C" opacity=".12"/>
+        </svg>
+        <span class="art-cat">Bills &amp; Energy</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>March 10, 2026</span><span class="dot">6 min read</span></div>
+        <h3>The 5 electricity plan traps that cost Australians $340 a year — and how to avoid them</h3>
+        <p>Most households are stuck on their retailer's standing offer without realising it. We break down the five pricing tricks used by energy companies and show you how to spot a better deal.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="art-card" data-cat="groceries">
+      <div class="art-visual">
+        <svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="360" height="160" fill="#E6F5F3"/>
+          <circle cx="100" cy="85" r="42" fill="#0D9E8C" opacity=".12"/>
+          <circle cx="200" cy="70" r="30" fill="#0D9E8C" opacity=".18"/>
+          <circle cx="280" cy="95" r="38" fill="#0D9E8C" opacity=".10"/>
+          <text x="50" y="115" font-family="Inter,sans-serif" font-weight="800" font-size="60" fill="#0D9E8C" opacity=".10">32%</text>
+        </svg>
+        <span class="art-cat">Groceries</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>March 4, 2026</span><span class="dot">4 min read</span></div>
+        <h3>How scanning your fridge weekly cuts grocery spend by up to 32%</h3>
+        <p>Buying duplicates and letting perishables expire quietly drains household budgets. Here's the simple habit to fix it.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="art-card" data-cat="home">
+      <div class="art-visual">
+        <svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="360" height="160" fill="#EEF1F7"/>
+          <polygon points="180,28 295,105 65,105" fill="none" stroke="#1B2D48" stroke-width="2.5" opacity=".12"/>
+          <rect x="135" y="105" width="90" height="50" fill="none" stroke="#1B2D48" stroke-width="2" opacity=".10"/>
+          <rect x="163" y="118" width="34" height="38" fill="#1B2D48" opacity=".07"/>
+          <circle cx="88" cy="135" r="5" fill="#0D9E8C" opacity=".4"/>
+          <circle cx="108" cy="135" r="5" fill="#0D9E8C" opacity=".3"/>
+          <circle cx="128" cy="135" r="5" fill="#0D9E8C" opacity=".4"/>
+        </svg>
+        <span class="art-cat">Home Services</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>Feb 24, 2026</span><span class="dot">5 min read</span></div>
+        <h3>What you should actually be paying for a regular cleaner in Australia (2026)</h3>
+        <p>Rates vary wildly by city and frequency. We surveyed 1,400 households to find the real benchmarks.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="art-card" data-cat="bills">
+      <div class="art-visual">
+        <svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="360" height="160" fill="#FFF8EE"/>
+          <rect x="70" y="105" width="28" height="42" rx="3" fill="#1B2D48" opacity=".15"/>
+          <rect x="112" y="82" width="28" height="65" rx="3" fill="#1B2D48" opacity=".18"/>
+          <rect x="154" y="92" width="28" height="55" rx="3" fill="#0D9E8C" opacity=".4"/>
+          <rect x="196" y="70" width="28" height="77" rx="3" fill="#1B2D48" opacity=".12"/>
+          <rect x="238" y="56" width="28" height="91" rx="3" fill="#0D9E8C" opacity=".22"/>
+        </svg>
+        <span class="art-cat">Bills &amp; Energy</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>Feb 17, 2026</span><span class="dot">3 min read</span></div>
+        <h3>Solar feed-in tariffs explained: are you getting a fair rate?</h3>
+        <p>Many solar households accept whatever their retailer offers. Here's what a competitive feed-in rate looks like right now.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="art-card" data-cat="news">
+      <div class="art-visual">
+        <svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="360" height="160" fill="#1B2D48"/>
+          <circle cx="130" cy="80" r="36" fill="#0D9E8C" opacity=".2"/>
+          <circle cx="190" cy="62" r="24" fill="#0D9E8C" opacity=".15"/>
+          <circle cx="245" cy="85" r="32" fill="#0D9E8C" opacity=".12"/>
+          <text x="46" y="132" font-family="Inter,sans-serif" font-weight="800" font-size="18" fill="#fff" opacity=".15">JERICO UPDATE</text>
+        </svg>
+        <span class="art-cat">News</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>Feb 10, 2026</span><span class="dot">2 min read</span></div>
+        <h3>Jerico launches Group Buying — save more together</h3>
+        <p>Group Buying is now live for all plan tiers. Pool your negotiating power with other Jerico households.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="art-card" data-cat="groceries">
+      <div class="art-visual">
+        <svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="360" height="160" fill="#F0FEF9"/>
+          <rect x="88" y="32" width="184" height="108" rx="10" fill="#fff" opacity=".7" stroke="#0D9E8C" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="108" y1="66" x2="252" y2="66" stroke="#0D9E8C" stroke-width="1.5" opacity=".35"/>
+          <line x1="108" y1="84" x2="232" y2="84" stroke="#0D9E8C" stroke-width="1.5" opacity=".25"/>
+          <line x1="108" y1="102" x2="240" y2="102" stroke="#0D9E8C" stroke-width="1.5" opacity=".25"/>
+          <rect x="108" y="42" width="28" height="16" rx="4" fill="#0D9E8C" opacity=".18"/>
+          <text x="112" y="54" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#0D9E8C" opacity=".7">AI</text>
+        </svg>
+        <span class="art-cat">Groceries</span>
+      </div>
+      <div class="art-body">
+        <div class="art-meta"><span>Jan 28, 2026</span><span class="dot">4 min read</span></div>
+        <h3>Recipe ideas from what's actually in your fridge — how Jerico's AI chat works</h3>
+        <p>No more staring at leftovers. Jerico reads your current inventory and surfaces meal ideas that reduce waste.</p>
+        <a href="blog-post.html" class="art-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="blog-nl">
+    <div>
+      <h3>Get the monthly digest</h3>
+      <p>One email a month. The best tips, benchmark data, and new Jerico features. No fluff.</p>
+    </div>
+    <form class="nl-form" onsubmit="return false">
+      <input type="email" placeholder="your@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-row">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAYAAABGiCfwAAAExElEQVR42o1WS4gcVRQ9975XXV2Vznzy6TEYPwn+FtkZcKGLcWd2ulP8EAkBs5Bk4UJRaIa4EBduEjArTYKLLAxIhARCIFkEwUT8TAYkouajTDIznZl0z6erX713r4upnjST6WkvXIqqd3nn1T3nnipCjyAiqComJiZKO3fu3AZAABAAJEkCAJ6IJjv1qro1y7IBVc27txGRdqVSudsLB6rKqkq3b0895b3/SVVnVbWuqveKnCnuvwCALMteVdXJou5eV9ZVddo5/8F6YBYA8jw/qn1ifHx8OIRwqriVtWq893fOnDmT2l54AGCtHSraJwDMqnUCJOzYsaMEIC+eeQDdewoAVtX29PS0YawfAQAXXD2UISiOHDnusyxDr5pODgwMaD8w6rOu16//GYjI439EPzDtt55uS6h/HSmwFXbdGkEEXuFCVx2Cicg+OTzsmTkq+AmruiFFbTQ46LSXGg0AeO/f6iPGHwEgc+6j9YpCCOdrtRr34wS56ssW2N5Fdifai4uLlyqVyt2LFy/a0dHRlwAMPVDqSidyAJeJqGn7gU1PTl6bnluYq9cblKaJDSGwOtXNmyuzu3Y9fRcANo5upG9u/d4E5SHXELyKMIiI1cTlipaWfAqgSb3aSERhIcv2JFF0mpmTteq890ejKHr/2xu/fVzZsvnTpYUFEHNBqkJVEccxmvfm/kgMvbDum22I4wMAkqIVq4faEPN+VT14/PqVR2RhXptz93PqGmoFlImJjX3MshmxHS9cNQZUKMt0lLdqvcOHA0C5lywEJS/KRMqqD8AMEbGGfIFJbOHwHUtaa86oz9CTF42cF/iwrPRlMIJCEZjAICqXileen5/fZa3d75wvMTMnSXzDGPN5jwM8FM57a72HCwHQZa6WwQBmgAkotyPYer0+kKTpacP8TLn8YIOlpaWTaZq2+uAIAHVe1ISAtvdd4lhuiFGAIWgqwVYqlW2GeXuXSxAAcs7FaZpGBXdhDZCOYKTlXMR5gPMB0K52KMCsYDIomWXSpevT0EkjIj6EcKXYtFRcOxkB4CDyJRFpSvb55sIS2k6onQfkLiDPi/QBzosGLant4e66adOmDUT0WZ7nvxLRsDFGQghkjNEQgnHO3UzT9AdVPXT21t+7v58Yl4E4NgJZsQ9VhUUJFPJmnszO2PU+LVNTUxVVnVPVWRERVQ0iEhX/IQOZcycAvNNozGu7nVNGDOn2a5WAKDbw+c8f7n6l0XOoW8BitVo9DOBQr5o4igBAW65NS1kbhgiiAiICq6oCStZRKcgxALBxHK+8dWdYRQTtpjPJULnaJRC7cl4RYmb1ImqZTdt5XWy1YcAQFbBCiKDJ0GDUut84ceT1N8/VtMa21Wq1kiSJu12dmYEyqHANs8qqltcB2OIKImTOIYkiiCpMKTKGGK7R/OrFZ59779FajccwpjZN03+994eNMQdFxDJz9Netf/z5s5cWDxx4+xcAe7qsC8VfF4wxADNC7nGnPkuSB3aZEyEsRkGuWsPHTu7de+5kRwNjUOpy+pFGI6sMDpb5+Knv8nffeO2mqnKWZU90q7VcLuPqtWt4vFrFyMgILl++ik8uXODqSNVkomFLwo2v9+2bAYBarcZjY2Mr9PwHdesk8C+HPSAAAAAASUVORK5CYII=" class="footer-brand-icon" alt="Jerico">
+          <span class="footer-brand-name">Jerico</span>
+        </div>
+        <p class="footer-tagline">Your household intelligence platform. Always monitoring, always optimising.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help centre</a>
+        <a href="#">Contact us</a>
+        <a href="#">Security</a>
+        <a href="#">Status</a>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <span class="footer-copy">&copy; 2026 Jerico Technologies Pty Ltd · Not a financial adviser</span>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function(){
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+function filterCat(cat, btn) {
+  document.querySelectorAll('.pill').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.art-card[data-cat]').forEach(function(c){
+    c.classList.toggle('hidden', cat !== 'all' && c.dataset.cat !== cat);
+  });
+}
+</script>
+</body>
+</html>

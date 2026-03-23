@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jerico — The system behind your life</title>
+<meta name="description" content="Jerico monitors your bills, groceries, and home services — and acts when you're overpaying. Always on. No effort required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="top">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="data:image/png;base64,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" class="brand-icon" alt="Jerico">
+      <span class="brand-name">Jerico</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="https://app.jerico.app/login" class="btn btn-outline">Sign in</a>
+      <a href="https://app.jerico.app/signup" class="btn btn-teal">Join free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>The system behind your life.</h1>
+        <p class="hero-sub">Jerico monitors your bills, groceries, and home services — and acts when you're overpaying. Always on. No effort required.</p>
+        <div class="hero-form">
+          <input class="field" type="email" id="hero-email" placeholder="Enter your email">
+          <button class="btn btn-teal btn-lg" onclick="handleSignup('hero-email', 'hero-msg')">Join free →</button>
+        </div>
+        <p id="hero-msg" style="display:none;color:#0D9E8C;font-size:0.875rem;margin-top:0.5rem;"></p>
+        <p class="hero-trust">No credit card required. Join 2,400 households already saving.</p>
+      </div>
+      <div>
+        <div class="savings-card">
+          <div class="sc-head">
+            <h3>Your Savings Summary</h3>
+            <span class="sc-period">This month</span>
+          </div>
+          <div class="sc-total">$124</div>
+          <div class="sc-sublabel">Identified savings</div>
+          <div class="sc-rows">
+            <div>
+              <div class="sc-row-labels"><span>Electricity</span><span>$42</span></div>
+              <div class="sc-bar"><div class="sc-fill" style="width:75%"></div></div>
+            </div>
+            <div>
+              <div class="sc-row-labels"><span>Groceries</span><span>$38</span></div>
+              <div class="sc-bar"><div class="sc-fill" style="width:62%"></div></div>
+            </div>
+            <div>
+              <div class="sc-row-labels"><span>Internet</span><span>$28</span></div>
+              <div class="sc-bar"><div class="sc-fill" style="width:48%"></div></div>
+            </div>
+            <div>
+              <div class="sc-row-labels"><span>Insurance</span><span>$16</span></div>
+              <div class="sc-bar"><div class="sc-fill" style="width:28%"></div></div>
+            </div>
+          </div>
+          <a href="https://app.jerico.app/signup" class="btn btn-navy" style="width:100%;justify-content:center;border-radius:8px;">Join free →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="wrap">
+    <p class="stats-headline">Jerico households save an average of $1,240 per year</p>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="stat-num">12,400+</div>
+        <div class="stat-lbl">Bills optimised</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="stat-num">340+</div>
+        <div class="stat-lbl">Providers monitored</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="stat-num">$1,240</div>
+        <div class="stat-lbl">Avg. annual saving</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>Three simple steps to start saving on your household expenses</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Connect your bills</h3>
+        <p>Upload or forward bills. Jerico reads them automatically.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3>Jerico finds savings</h3>
+        <p>AI benchmarks your rates against the full market.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
+        <h3>Always-on monitoring</h3>
+        <p>Get alerted the moment a better deal appears, every month, forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Everything you need to optimise</h2>
+      <p>Comprehensive tools to reduce household costs and increase efficiency</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Bill optimisation</h3>
+        <p>Automatically find better rates for electricity, gas, internet, and insurance.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <h3>Grocery intelligence</h3>
+        <p>Track spending patterns and discover cheaper alternatives at nearby stores.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Home services tracking</h3>
+        <p>Monitor maintenance costs and get alerts when services are overdue or overpriced.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Group buying deals</h3>
+        <p>Access exclusive rates negotiated for Jerico households collectively.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <h3>Project consulting</h3>
+        <p>Get expert advice on major household decisions like solar, renovations, or appliances.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Jerico Score</h3>
+        <p>Your household efficiency rating — see how you compare and where to improve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Simple, transparent pricing</h2>
+      <p>Choose the plan that fits your household needs</p>
+    </div>
+    <div class="toggle-row">
+      <span class="toggle-lbl on" id="lbl-monthly">Monthly</span>
+      <label class="tog">
+        <input type="checkbox" id="billing-tog" onchange="toggleBilling()">
+        <span class="tog-track"></span>
+        <span class="tog-thumb"></span>
+      </label>
+      <span class="toggle-lbl" id="lbl-annual">Annual <span style="color:var(--teal);font-size:11px;font-weight:700;margin-left:4px">Save 20%</span></span>
+    </div>
+    <div class="plans-grid">
+      <div class="plan">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">
+          <span class="amount">$0</span><span class="per">/mo</span>
+        </div>
+        <p class="plan-desc">Get started with basic bill monitoring for your household.</p>
+        <hr>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>2 bills tracked</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Monthly rate benchmarks</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Email alerts</li>
+          <li class="off"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Grocery intelligence</li>
+          <li class="off"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Group buying</li>
+        </ul>
+        <a href="https://app.jerico.app/signup" class="plan-btn plan-btn-outline">Get started free</a>
+      </div>
+      <div class="plan popular">
+        <div class="popular-tag">Most popular</div>
+        <div class="plan-name">Plus</div>
+        <div class="plan-price">
+          <span class="amount" id="plus-price">$9</span><span class="per">/mo</span>
+        </div>
+        <p class="plan-desc">Full bill optimisation and grocery intelligence for active households.</p>
+        <hr>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Unlimited bills tracked</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Weekly benchmarks</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Grocery intelligence</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Home services tracking</li>
+          <li class="off"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Group buying deals</li>
+        </ul>
+        <a href="https://app.jerico.app/signup" class="plan-btn plan-btn-teal">Get started</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">
+          <span class="amount" id="pro-price">$19</span><span class="per">/mo</span>
+        </div>
+        <p class="plan-desc">Everything included, plus group buying and project consulting.</p>
+        <hr>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Everything in Plus</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Group buying deals</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Project consulting</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Jerico Score</li>
+          <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5 5 4 7.5 8.5 2"/></svg></span>Priority support</li>
+        </ul>
+        <a href="#cta" class="plan-btn plan-btn-outline">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP BUY -->
+<section class="group-buy">
+  <div class="wrap">
+    <div class="gb-inner">
+      <div>
+        <h2>Save more together with Group Buying</h2>
+        <p>Pool your household's negotiating power with other Jerico members. Unlock rates normally reserved for large businesses — on electricity, internet, insurance and more.</p>
+      </div>
+      <div class="gb-stats">
+        <div>
+          <div class="gb-num">4,200+</div>
+          <div class="gb-lbl">Households in groups</div>
+        </div>
+        <div>
+          <div class="gb-num">$340</div>
+          <div class="gb-lbl">Extra saved per year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know about Jerico</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does Jerico read my bills?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>You can upload PDFs directly, forward bill emails to your Jerico address, or connect your utility accounts via read-only API. Jerico extracts the key data automatically — you never need to enter numbers manually.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does Jerico switch providers on my behalf?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>Not automatically. Jerico identifies better deals and makes a recommendation with all the details. You approve any switch — we never take action without your explicit consent.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is Jerico paid by energy retailers or insurers?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>No. Jerico is funded entirely by subscriber fees. We do not accept referral fees, commissions, or advertising from any provider. Our recommendations are always in your interest, not ours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the grocery scanning work?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>Take a photo of your weekly shop, fridge, or pantry in the app. Jerico's AI parses the image into a structured inventory of perishable and non-perishable items, tracks expiry dates, flags what's running low, and surfaces recipe ideas from what you already have.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What countries does Jerico support?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>Jerico is currently available in Australia, with New Zealand launching in Q3 2026. We are actively building provider databases for the UK and Canada — join the waitlist to be notified.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I cancel my subscription at any time?
+          <svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-body"><p>Yes. Cancel anytime from your account settings with no cancellation fee. Your data is exportable at any time in CSV or PDF format.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="wrap">
+    <h2>Start saving this month</h2>
+    <p>Join thousands of Australian households already using Jerico to cut household costs.</p>
+    <div class="cta-form">
+      <input class="field" type="email" id="cta-email" placeholder="Your email address">
+      <button class="btn btn-teal btn-lg" onclick="handleSignup('cta-email', 'cta-msg')">Join free →</button>
+    </div>
+    <p id="cta-msg" style="display:none;margin-top:0.5rem;font-size:0.875rem;"></p>
+    <p class="cta-note">Free to start · No credit card · Cancel any time</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="about">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-row">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAYAAABGiCfwAAAExElEQVR42o1WS4gcVRQ9975XXV2Vznzy6TEYPwn+FtkZcKGLcWd2ulP8EAkBs5Bk4UJRaIa4EBduEjArTYKLLAxIhARCIFkEwUT8TAYkouajTDIznZl0z6erX713r4upnjST6WkvXIqqd3nn1T3nnipCjyAiqComJiZKO3fu3AZAABAAJEkCAJ6IJjv1qro1y7IBVc27txGRdqVSudsLB6rKqkq3b0895b3/SVVnVbWuqveKnCnuvwCALMteVdXJou5eV9ZVddo5/8F6YBYA8jw/qn1ifHx8OIRwqriVtWq893fOnDmT2l54AGCtHSraJwDMqnUCJOzYsaMEIC+eeQDdewoAVtX29PS0YawfAQAXXD2UISiOHDnusyxDr5pODgwMaD8w6rOu16//GYjI439EPzDtt55uS6h/HSmwFXbdGkEEXuFCVx2Cicg+OTzsmTkq+AmruiFFbTQ46LSXGg0AeO/f6iPGHwEgc+6j9YpCCOdrtRr34wS56ssW2N5Fdifai4uLlyqVyt2LFy/a0dHRlwAMPVDqSidyAJeJqGn7gU1PTl6bnluYq9cblKaJDSGwOtXNmyuzu3Y9fRcANo5upG9u/d4E5SHXELyKMIiI1cTlipaWfAqgSb3aSERhIcv2JFF0mpmTteq890ejKHr/2xu/fVzZsvnTpYUFEHNBqkJVEccxmvfm/kgMvbDum22I4wMAkqIVq4faEPN+VT14/PqVR2RhXptz93PqGmoFlImJjX3MshmxHS9cNQZUKMt0lLdqvcOHA0C5lywEJS/KRMqqD8AMEbGGfIFJbOHwHUtaa86oz9CTF42cF/iwrPRlMIJCEZjAICqXileen5/fZa3d75wvMTMnSXzDGPN5jwM8FM57a72HCwHQZa6WwQBmgAkotyPYer0+kKTpacP8TLn8YIOlpaWTaZq2+uAIAHVe1ISAtvdd4lhuiFGAIWgqwVYqlW2GeXuXSxAAcs7FaZpGBXdhDZCOYKTlXMR5gPMB0K52KMCsYDIomWXSpevT0EkjIj6EcKXYtFRcOxkB4CDyJRFpSvb55sIS2k6onQfkLiDPi/QBzosGLant4e66adOmDUT0WZ7nvxLRsDFGQghkjNEQgnHO3UzT9AdVPXT21t+7v58Yl4E4NgJZsQ9VhUUJFPJmnszO2PU+LVNTUxVVnVPVWRERVQ0iEhX/IQOZcycAvNNozGu7nVNGDOn2a5WAKDbw+c8f7n6l0XOoW8BitVo9DOBQr5o4igBAW65NS1kbhgiiAiICq6oCStZRKcgxALBxHK+8dWdYRQTtpjPJULnaJRC7cl4RYmb1ImqZTdt5XWy1YcAQFbBCiKDJ0GDUut84ceT1N8/VtMa21Wq1kiSJu12dmYEyqHANs8qqltcB2OIKImTOIYkiiCpMKTKGGK7R/OrFZ59779FajccwpjZN03+994eNMQdFxDJz9Netf/z5s5cWDxx4+xcAe7qsC8VfF4wxADNC7nGnPkuSB3aZEyEsRkGuWsPHTu7de+5kRwNjUOpy+pFGI6sMDpb5+Knv8nffeO2mqnKWZU90q7VcLuPqtWt4vFrFyMgILl++ik8uXODqSNVkomFLwo2v9+2bAYBarcZjY2Mr9PwHdesk8C+HPSAAAAAASUVORK5CYII=" class="footer-brand-icon" alt="Jerico">
+          <span class="footer-brand-name">Jerico</span>
+        </div>
+        <p class="footer-tagline">Your household intelligence platform. Always monitoring, always optimising.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help centre</a>
+        <a href="#">Contact us</a>
+        <a href="#">Security</a>
+        <a href="#">Status</a>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <span class="footer-copy">&copy; 2026 Jerico Technologies Pty Ltd · ABN 00 000 000 000 · Not a financial adviser</span>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+function toggleBilling() {
+  var annual = document.getElementById('billing-tog').checked;
+  document.getElementById('plus-price').textContent = annual ? '$7' : '$9';
+  document.getElementById('pro-price').textContent = annual ? '$15' : '$19';
+  document.getElementById('lbl-monthly').classList.toggle('on', !annual);
+  document.getElementById('lbl-annual').classList.toggle('on', annual);
+}
+function toggleFaq(btn) {
+  var item = btn.closest('.faq-item');
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+  if (!wasOpen) item.classList.add('open');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+var _supa = supabase.createClient(
+  'https://kaxhiakkbdpbpjuzkdne.supabase.co',
+  'sb_publishable_WCPvFsgFbIYvGpNzTgOCIg_17UhtNlc'
+);
+
+async function handleSignup(inputId, msgId) {
+  var email = document.getElementById(inputId).value.trim();
+  var msg = document.getElementById(msgId);
+  if (!email) {
+    msg.style.display = 'block';
+    msg.style.color = '#e53e3e';
+    msg.textContent = 'Please enter your email address.';
+    return;
+  }
+  msg.style.display = 'block';
+  msg.style.color = '#6B7A8D';
+  msg.textContent = 'Sending your link…';
+  var result = await _supa.auth.signInWithOtp({
+    email: email,
+    options: {
+      shouldCreateUser: true,
+      emailRedirectTo: 'https://app.jerico.app/auth/callback'
+    }
+  });
+  if (result.error) {
+    msg.style.color = '#e53e3e';
+    msg.textContent = 'Something went wrong — please try again.';
+  } else {
+    msg.style.color = '#0D9E8C';
+    msg.textContent = '✓ Check your email — we sent you a sign-in link!';
+    document.getElementById(inputId).value = '';
+  }
+}
+</script>
+</body>
+</html>
